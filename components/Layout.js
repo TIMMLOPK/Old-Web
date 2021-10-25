@@ -11,33 +11,60 @@ import BlackLivesMatter from './BlackLivesMatter'
 const menu = [
   {
     path: '/',
-    name: '0. start',
+    name: 'Home',
   },
   {
     path: '/about',
-    name: '1. about',
+    name: 'About',
   },
   {
     path: '/uses',
-    name: '2. uses',
+    name: 'More',
   },
 ]
+
 const SHORTCUTS = ['Digit0', 'Digit1', 'Digit2']
-const avatar = `https://images.weserv.nl/?url=https://unavatar.now.sh/twitter/telmo&w=150`
+const icon= 'photoReturn'
 const SALUTS = [
   'Hey you.',
   'Welcome.',
-  'Howdy.',
-  'Ahoy!',
   `What's up?`,
   `How's life?`,
   '👋',
   'Long time no see.',
   'Yo!',
-  'Hiya!',
-  `G'day mate!`,
-  'Sup?'
 ]
+
+function getPhoto(a) {
+
+  // validation for instagram usernames
+  var regex = new RegExp(/^(?!.*\.\.)(?!.*\.$)[^\W][\w.]{0,29}$/);
+  var validation = regex.test(a);
+
+  if (validation) {
+
+    $.get("https://www.instagram.com/" + a + "/?__a=1")
+      .done(function (data) {
+
+        // getting the url
+        var photoURL = data["graphql"]["user"]["profile_pic_url_hd"];
+
+        // update img element
+        $("#photoReturn").attr("src", photoURL)
+
+      })
+      .fail(function () {
+        // code for 404 error 
+        alert('Username was not found!')
+      })
+
+  } else {
+
+    alert('The username is invalid!')
+  }
+
+}
+
 
 function Layout({ children, isHomepage, secondaryPage }) {
   const router = useRouter()
@@ -83,7 +110,7 @@ function Layout({ children, isHomepage, secondaryPage }) {
 
   const containerProps = {
     ...isHomepage && { md: 12 },
-    ...!isHomepage && { md: 8, mdOffset: 2 },
+    ...!isHomepage && { md: 5, mdOffset: 2 },
   }
 
   if (!mounted) return <div />
@@ -99,7 +126,7 @@ function Layout({ children, isHomepage, secondaryPage }) {
               <li className="logo">
                 <Link href="/" as="/">
                   <a>
-                    <img src={avatar} />
+                    <img src={icon} />
                   </a>
                 </Link>
               </li>
@@ -132,7 +159,7 @@ function Layout({ children, isHomepage, secondaryPage }) {
                 </h1>
 
                 <p className="entry-description">
-                  I write about code, design & life. — Telmo
+                  Welcome to Once. 2.0 Enjoy it！ — Timmy
                 </p>
               </div>
             )}
@@ -166,6 +193,7 @@ function Layout({ children, isHomepage, secondaryPage }) {
 
       <footer>
         <div>No tracking. No ads. Happy {currentDayName()}!</div>
+        <div>IG@once</div>
         <div>&copy; {new Date().getFullYear()}</div>
       </footer>
     </>

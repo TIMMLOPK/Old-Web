@@ -6,7 +6,7 @@ function BlackLivesMatter() {
   return (
     <div className="support-blm">
       <span>
-        I support <strong>#BlackLivesMatter</strong>, consider making a donation. {' '}
+        Website <strong></strong>, {' '}
 
         <a href={DONATE_LINK} target="_blank" rel="noopener noreferrer nofollow">
           Donate now!
