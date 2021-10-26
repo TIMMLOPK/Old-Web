@@ -1,0 +1,1 @@
+(window.webpackJsonp_N_E=window.webpackJsonp_N_E||[]).push([[19],{"7Fir":function(n,t,e){"use strict";e.r(t),t.default='---\ntitle: "Hello world"\ndate: "2021-10-26 19:46"\nog:\n  description: "2.0 Test"\nauthor:\n  twitter: "telmo"\n  name: "Timmy"\n---\nTesting\n\n\n'}}]);

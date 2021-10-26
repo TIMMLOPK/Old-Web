@@ -12,7 +12,6 @@ import CodeBlock from '../../components/CodeBlock'
 function Writing({ content, data }) {
   const frontmatter = data
   const { title, author } = frontmatter
-  const avatar = `https://images.weserv.nl/?url=https://unavatar.now.sh/twitter/${author.twitter}&w=40`
   const { text } = readingTime(content)
 
   return (
@@ -37,8 +36,7 @@ function Writing({ content, data }) {
           </div>
 
           <div className="author">
-            <a href={`https://twitter.com/${author.twitter}`} target="_blank" rel="noopener noreferrer nofollow">
-              <img src={avatar} />
+            <a href={`https://instagram.com/${author.twitter}`} target="_blank" rel="noopener noreferrer nofollow">
               {author.name}
             </a>
           </div>
@@ -62,11 +60,11 @@ function Writing({ content, data }) {
             <div />
 
             <div className="hope-liked">
-              Hope this helped you in any way.
+              Reading More.
 
               <br />
 
-              — Telmo
+              — Timmy
             </div>
           </div>
         </div>

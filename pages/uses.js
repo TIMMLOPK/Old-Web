@@ -12,8 +12,8 @@ function Uses({ og }) {
         <div className="uses-intro">
           I often get asked about what's my setup as well as what
           I use to share all the tips I usually post on {' '}
-          <a href="https://twitter.com/telmo" target="_blank" rel="noopener noreferrer nofollow">
-            Twitter
+          <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer nofollow">
+            Insrtagram
           </a>, {' '}
           so here it is.
         </div>

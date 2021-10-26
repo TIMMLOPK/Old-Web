@@ -1,15 +1,15 @@
 import React from 'react'
 
-const DONATE_LINK = `https://secure.actblue.com/donate/ms_blm_homepage_2019`
+const DONATE_LINK = `www.google.com`
 
 function BlackLivesMatter() {
   return (
     <div className="support-blm">
       <span>
-        Website <strong></strong>, {' '}
+        Website <strong></strong>{' '}
 
         <a href={DONATE_LINK} target="_blank" rel="noopener noreferrer nofollow">
-          Donate now!
+          Follow now!
         </a>
       </span>
     </div>
