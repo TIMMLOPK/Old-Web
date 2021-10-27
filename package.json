@@ -12,12 +12,10 @@
   "author": "Telmo Goncalves <@telmo>",
   "license": "ISC",
   "dependencies": {
-    "@react-spring/web": "^9.3.0",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
     "gray-matter": "^4.0.2",
-    "instagram-profile-picture": "^1.0.5",
-    "next": "^9.5.5",
+    "next": "^10",
     "next-transpile-modules": "^2.3.1",
     "raw-loader": "^4.0.1",
     "react": "^16.13.1",
@@ -31,7 +29,6 @@
     "react-syntax-highlighter": "^12.2.1",
     "react-text-transition": "^1.0.2",
     "reading-time": "^1.2.0",
-    "simple-icons": "^2.9.0",
-    "webpack": "^4.44.2"
+    "simple-icons": "^2.9.0"
   }
 }

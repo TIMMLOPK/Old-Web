@@ -12,6 +12,7 @@ import CodeBlock from '../../components/CodeBlock'
 function Writing({ content, data }) {
   const frontmatter = data
   const { title, author } = frontmatter
+  const avatar = `https://images.weserv.nl/?url=https://unavatar.now.sh/twitter/${author.twitter}&w=40`
   const { text } = readingTime(content)
 
   return (
@@ -36,7 +37,8 @@ function Writing({ content, data }) {
           </div>
 
           <div className="author">
-            <a href={`https://instagram.com/${author.twitter}`} target="_blank" rel="noopener noreferrer nofollow">
+            <a href={`https://twitter.com/${author.twitter}`} target="_blank" rel="noopener noreferrer nofollow">
+              <img src={avatar} />
               {author.name}
             </a>
           </div>
@@ -60,11 +62,11 @@ function Writing({ content, data }) {
             <div />
 
             <div className="hope-liked">
-              Reading More.
+              Hope this helped you in any way.
 
               <br />
 
-              — Timmy
+              — Telmo
             </div>
           </div>
         </div>
@@ -78,7 +80,7 @@ Writing.getInitialProps = async (context) => {
   const content = await import(`../../writings/${slug}.md`)
   const data = matter(content.default)
 
-  return { ...data }
+  return { ...data, fellback: false}
 }
 
 export default Writing
